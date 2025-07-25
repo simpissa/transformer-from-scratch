@@ -1,0 +1,25 @@
+device: 'cuda'
+batch_size: 4
+
+optimizer:
+  lr_min: 0.0001
+  lr_max: 0.001
+  T_w: 100
+  T_c: 4500
+  training_iterations: 10
+  M: 1.0
+  eps: 1e-8
+
+model:
+  vocab_size: 10000
+  context_length: 128
+  d_model: 512
+  d_ff: 2048
+  num_layers: 10
+  num_heads: 8
+  rope_theta: 10000
+
+decoding:
+  temperature: 1.0
+  p: 0.9
+  max_tokens: 256
